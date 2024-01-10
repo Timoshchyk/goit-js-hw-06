@@ -18,8 +18,8 @@ addItem(newItem) {
     this.#items.push(newItem);
 }
 removeItem(itemToRemove) {
-    if (itemToRemove.includes("Prolonger")) {
-    this.#items.splice(1, 1);
+    if (this.#items.indexOf(itemToRemove) !== -1) {
+    this.#items.splice(this.#items.indexOf(itemToRemove), 1);
     }
 }
 }
